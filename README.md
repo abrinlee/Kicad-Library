@@ -9,12 +9,12 @@ Capacitor Lib
 These will be ceramics 10pF to 1uF and various dielectrics and voltages 0201 - 1206
 
 Libraries you want to use:
-R0201.kikad.sym
-R0201.kikad.sym
-R0201.kikad.sym
-R0201.kikad.sym
-R0201.kikad.sym
-C0402.kikad.sym
-C0603.kikad.sym
-C0805.kikad.sym
-C1206.kikad.sym
+R0201.kicad.sym
+R0201.kicad.sym
+R0201.kicad.sym
+R0201.kicad.sym
+R0201.kicad.sym
+C0402.kicad.sym
+C0603.kicad.sym
+C0805.kicad.sym
+C1206.kicad.sym
