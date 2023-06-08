@@ -13,7 +13,7 @@ def replace_symbol(line, row):
 def replace_properties(line, row):
     # List of properties
     properties = ['Value', 'Dielectric', 'Voltage', 'Tolerance', 
-                  'MFG #1', 'P/N #1', 'MFG #2', 'P/N #2', 'MFG #3', 'P/N #3', 
+                  'MFG #1', 'P/N #1', 'MFG #2', 'P/N #2', 'MFG #3', 'P/N #3', 'Description', 
                   'ki_keywords', 'ki_description']
 
     for prop in properties:
@@ -23,6 +23,9 @@ def replace_properties(line, row):
             elif prop in ['Dielectric', 'Voltage', 'Tolerance', 
                           'MFG #1', 'P/N #1', 'MFG #2', 'P/N #2', 'MFG #3', 'P/N #3']:
                 line = line.replace('""', f'"{row[prop]}"')
+            elif prop == 'Description':
+                line = line.replace('Unpolarized capacitor, small symbol', 
+                                    f'MLCC, {row["Value"]}, {row["Voltage"]}, {row["Dielectric"]}, {row["Tolerance"]}, C0402')
             elif prop == 'ki_keywords':
                 line = line.replace('capacitor cap', 
                                     f'C0402 {row["Value"]} {row["Voltage"]} {row["Dielectric"]} {row["Tolerance"]}')
